@@ -1,51 +1,71 @@
 <template>
-  <div id="hero">
-    <h1 id="announceTin">Hi, I'm Tin</h1>
-    <p id="describeTin">
-      a skilled software developer specialized in both <b>front-end</b> and
-      <b>back-end</b>
-    </p>
-    <NuxtLink id="nuxtLink" to="/portfolio">
-      <vs-button id="heroButton" size="xl" border warn square>
-        Portfolio
-      </vs-button>
-    </NuxtLink>
-    <NuxtLink id="nuxtLink" to="/myoffer">
-      <vs-button id="heroButton" size="xl" border warn square>
-        My Offer
-      </vs-button>
-    </NuxtLink>
+  <div id="background">
+    <div id="hero">
+      <h1 id="intro">Hi, I'm Tin.</h1>
+      <p id="description">
+        A skilled software engineer with over
+        <b>{{ dateDifference }} years of experience</b> specialized in both
+        <b>front end</b> and <b>back end</b>.
+      </p>
+      <div id="button-container">
+        <NuxtLink to="/portfolio">
+          <Button text="Portfolio" />
+        </NuxtLink>
+        <NuxtLink to="/offer">
+          <Button text="My offer" />
+        </NuxtLink>
+        <NuxtLink to="/offer">
+          <Button text="Grab CV" />
+        </NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    setActiveCategory(number) {
-      this.$store.commit("setActive", number);
-    },
-  },
-};
+<script setup>
+const dateDifference = new Date().getFullYear() - 2018;
 </script>
 
-<style>
+<style scoped>
+#background {
+  padding: 160px 0 0 60px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-image: url("/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 #hero {
-  margin: 100px 0px 0px 40px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   color: white;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
 
-#heroButton {
-  width: 150px;
-  margin-bottom: 8px;
-}
-
-#announceTin {
+#intro {
+  margin: 0;
   font-size: 60px;
 }
 
-#describeTin {
+#description {
   max-width: 650px;
   font-size: 30px;
+}
+
+#button-container {
+  display: flex;
+  gap: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 </style>

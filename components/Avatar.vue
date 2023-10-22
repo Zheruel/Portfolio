@@ -5,7 +5,7 @@
 </template>
 
 <script>
-export default defineComponent({
+export default {
   props: {
     url: {
       type: String,
@@ -20,12 +20,11 @@ export default defineComponent({
       default: 50,
     },
   },
-});
+};
 </script>
 
 <style scoped>
 .avatar {
-  background-color: #333;
   padding: 10px;
   text-align: center;
 }
