@@ -5,7 +5,7 @@
       <p id="description">
         A skilled software engineer with over
         <b>{{ dateDifference }} years of experience</b> specialized in both
-        <b>front end</b> and <b>back end</b>.
+        <b>front-end</b> and <b>back-end</b>.
       </p>
       <div id="button-container">
         <NuxtLink to="/portfolio">
@@ -13,9 +13,6 @@
         </NuxtLink>
         <NuxtLink to="/offer">
           <Button text="My offer" />
-        </NuxtLink>
-        <NuxtLink to="/offer">
-          <Button text="Grab CV" />
         </NuxtLink>
       </div>
     </div>

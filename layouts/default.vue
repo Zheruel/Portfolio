@@ -15,7 +15,7 @@
 }
 
 #dynamic-content {
-  width: 75%;
+  width: 84%;
   height: 100%;
   background: #f6f6f6;
   color: #333;

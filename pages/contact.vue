@@ -1,78 +1,81 @@
 <template>
-  <div id="hire-me-section">
-    <h1>Hire me</h1>
-    <p>I'm open to hear about great ideas of cooperation.</p>
-    <div id="contactSectionGroup" style="margin: 30px 0 20px 0">
-      <p id="contactSectionLabel">E-mail:</p>
-      <font-awesome-icon id="contactIcon" :icon="['fas', 'envelope']" />
-      <a href="mailto:tinzeljar@gmail.com"> tinzeljar@gmail.com </a>
+  <div id="contact-section">
+    <h1>Contact me</h1>
+    <p>I'm open to hear about interesting proposals.</p>
+
+    <div class="flex-container" style="margin: 30px 0 20px 0">
+      <p class="contact-section-label">E-mail:</p>
+      <a href="mailto:tinzeljar@gmail.com">
+        <Icon name="ic:baseline-email" class="contact-icon" />
+        tinzeljar@gmail.com
+      </a>
     </div>
-    <div id="contactSectionGroup">
-      <p id="contactSectionLabel">LinkedIn:</p>
-      <font-awesome-icon id="contactIcon" :icon="['fab', 'linkedin']" />
+
+    <div class="flex-container">
+      <p class="contact-section-label">LinkedIn:</p>
       <a href="https://www.linkedin.com/in/tin-zeljar/" target="_blank">
+        <Icon name="akar-icons:linkedin-fill" class="contact-icon" />
         Tin Zeljar
       </a>
     </div>
-    <div id="contactSectionGroup">
-      <p id="contactSectionLabel">GitHub:</p>
-      <font-awesome-icon id="contactIcon" :icon="['fab', 'github']" />
-      <a href="https://github.com/Zheruel" target="_blank"> Tin Zeljar </a>
+
+    <div class="flex-container">
+      <p class="contact-section-label">GitHub:</p>
+      <a href="https://github.com/Zheruel" target="_blank">
+        <Icon name="akar-icons:github-fill" class="contact-icon" />
+        Tin Zeljar
+      </a>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  components: {},
-};
-</script>
 
 <style scoped>
 p {
   color: #555;
 }
 
-#hire-me-section {
-  padding: 50px;
-  max-width: 850px;
-  background-color: white;
-  color: #555;
-}
-
-#contactMeSection h1 {
+h1 {
   margin: 0;
   text-transform: uppercase;
   font-weight: 400;
 }
 
-#contactMeSection a {
+a {
   text-decoration: none;
   color: #40748a;
 }
 
-#contactSectionLabel {
-  width: 50px;
-  margin: 0 100px 5px 0;
+a:hover {
+  opacity: 0.8;
 }
 
-#contactSectionGroup {
+#contact-section {
+  padding: 50px;
+  max-width: 850px;
+  background-color: white;
+  color: #555;
+
+  @media screen and (max-width: 1024px) {
+    padding: 30px 20px;
+  }
+}
+
+.flex-container {
   display: flex;
   align-items: center;
 }
 
-#contactIcon {
+.contact-icon {
   color: #40748a;
   margin-right: 5px;
   font-size: 20px;
 }
 
-@media screen and (max-width: 1024px) {
-  #contactMeSection {
-    padding: 30px 20px;
-  }
+.contact-section-label {
+  width: 50px;
+  margin: 0 100px 5px 0;
 
-  #contactSectionLabel {
+  @media screen and (max-width: 1024px) {
     width: 50px;
     margin: 0 60px 5px 0;
   }
