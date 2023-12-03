@@ -63,7 +63,7 @@
     </p>
     <p>
       <b>Back-end/desktop:</b>
-      C, C++, C#, .NET, Python, Django, Node, PHP
+      C, C++, C#, .NET, Python, Django, Node, PHP, AWS Serverless
     </p>
     <p>
       <b>Database:</b>
@@ -105,7 +105,7 @@
       propel your project forward.
     </p>
     <p>
-      Your needs, your problems – let's solve them
+      Let's tackle your unique challenges
       <NuxtLink class="highlight" to="/contact"> together</NuxtLink>
       .
     </p>

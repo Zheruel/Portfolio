@@ -5,7 +5,7 @@ on:
     branches:
       - main
   pull_request:
-    types: [ opened, synchronize, reopened ]
+    types: [opened, synchronize, reopened]
 
 jobs:
   cache:
@@ -30,7 +30,6 @@ jobs:
       - name: Install Node.js dependencies
         if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
-
 
   lint:
     name: Lint

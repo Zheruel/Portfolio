@@ -54,7 +54,7 @@ p {
 }
 
 #sidebar-container {
-  width: 16%;
+  width: 20%;
   height: 100%;
   background: url("/background.jpg") no-repeat center center/cover;
   position: relative;
