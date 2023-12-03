@@ -106,7 +106,8 @@
     </p>
     <p>
       Your needs, your problems – let's solve them
-      <NuxtLink class="highlight" to="/contact"> together</NuxtLink>.
+      <NuxtLink class="highlight" to="/contact"> together</NuxtLink>
+      .
     </p>
   </div>
 </template>
